@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Geography — GK Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Indian Geography — GK Quiz</h1>
+      <p class="subtitle">Test your knowledge with 100 questions on Indian geography</p>
+    </header>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="card">
+      <h2>Welcome!</h2>
+      <p>Select how many questions you’d like and start the quiz.</p>
+      <div class="controls">
+        <label>Number of questions:
+          <select id="numQuestions">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100" selected>100</option>
+          </select>
+        </label>
+        <label>
+          <input type="checkbox" id="shuffleQ"> Shuffle questions
+        </label>
+        <button id="startBtn" class="btn primary">Start Quiz</button>
+      </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="card hidden">
+      <div class="progress"><div id="progressFill"></div></div>
+      <p id="qIndex"></p>
+      <div id="questionBox">
+        <p id="questionText" class="question"></p>
+        <div id="choices" class="choices"></div>
+      </div>
+      <div class="quiz-controls">
+        <button id="prevBtn" class="btn">Previous</button>
+        <button id="nextBtn" class="btn">Next</button>
+        <button id="submitBtn" class="btn primary">Submit</button>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="card hidden">
+      <h2>Your Results</h2>
+      <p id="resultText"></p>
+      <div id="breakdown" class="breakdown"></div>
+      <div class="controls">
+        <button id="retryBtn" class="btn">Retry</button>
+        <a id="shareLink" target="_blank" class="btn">Share Score</a>
+      </div>
+    </div>
+
+    <footer>
+      <small>Indian Geography Quiz • Powered by GitHub Pages</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
